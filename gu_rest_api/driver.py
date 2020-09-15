@@ -6,8 +6,9 @@ from gu_rest_api.none import NONE_IT
 class Driver(object):
     __slots__ = ('client', 'api_instance')
 
-    def __init__(self):
-        configuration = gu_rest_api.Configuration()
+    def __init__(self, configuration=None):
+        configuration = configuration if configuration else \
+            gu_rest_api.Configuration()
         client = gu_rest_api.ApiClient(configuration)
         self.client = client
         self.api_instance = gu_rest_api.SessionApi(client)

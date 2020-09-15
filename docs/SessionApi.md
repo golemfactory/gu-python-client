@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**delete_session**](SessionApi.md#delete_session) | **DELETE** /sessions/{sessionId} | 
 [**download_blob**](SessionApi.md#download_blob) | **GET** /sessions/{sessionId}/blobs/{blobId} | Downloads binary content from the hub
 [**get_config**](SessionApi.md#get_config) | **GET** /sessions/{sessionId}/config | Gets configuration from stash
+[**get_hub_info**](SessionApi.md#get_hub_info) | **GET** /info | 
 [**get_session**](SessionApi.md#get_session) | **GET** /sessions/{sessionId} | Gets hub session info
 [**list_blobs**](SessionApi.md#list_blobs) | **GET** /sessions/{sessionId}/blobs | Lists currently allocated lobs
 [**list_session_peers**](SessionApi.md#list_session_peers) | **GET** /sessions/{sessionId}/peers | List session peers
@@ -826,6 +827,87 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_hub_info**
+> HubInfo get_hub_info()
+
+
+
+### Example
+
+* Api Key Authentication (serviceToken):
+```python
+from __future__ import print_function
+import time
+import gu_rest_api
+from gu_rest_api.rest import ApiException
+from pprint import pprint
+configuration = gu_rest_api.Configuration()
+# Configure API key authorization: serviceToken
+configuration.api_key['X-GU-APIKEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-GU-APIKEY'] = 'Bearer'
+configuration = gu_rest_api.Configuration()
+# Configure API key authorization: systemName
+configuration.api_key['X-GU-APPNAME'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-GU-APPNAME'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = gu_rest_api.SessionApi(gu_rest_api.ApiClient(configuration))
+
+try:
+    api_response = api_instance.get_hub_info()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SessionApi->get_hub_info: %s\n" % e)
+```
+
+* Api Key Authentication (systemName):
+```python
+from __future__ import print_function
+import time
+import gu_rest_api
+from gu_rest_api.rest import ApiException
+from pprint import pprint
+configuration = gu_rest_api.Configuration()
+# Configure API key authorization: serviceToken
+configuration.api_key['X-GU-APIKEY'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-GU-APIKEY'] = 'Bearer'
+configuration = gu_rest_api.Configuration()
+# Configure API key authorization: systemName
+configuration.api_key['X-GU-APPNAME'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-GU-APPNAME'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = gu_rest_api.SessionApi(gu_rest_api.ApiClient(configuration))
+
+try:
+    api_response = api_instance.get_hub_info()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling SessionApi->get_hub_info: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**HubInfo**](HubInfo.md)
+
+### Authorization
+
+[serviceToken](../README.md#serviceToken), [systemName](../README.md#systemName)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -83,6 +83,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PeerApi* | [**create_deployment**](docs/PeerApi.md#create_deployment) | **POST** /peers/{nodeId}/deployments | 
 *PeerApi* | [**drop_deployment**](docs/PeerApi.md#drop_deployment) | **DELETE** /peers/{nodeId}/deployments/{deploymentId} | Removes deployment
+*PeerApi* | [**get_hub_info**](docs/PeerApi.md#get_hub_info) | **GET** /info | 
 *PeerApi* | [**get_peer_details**](docs/PeerApi.md#get_peer_details) | **GET** /peers/{nodeId} | Returns detailed peer info
 *PeerApi* | [**list_deployments**](docs/PeerApi.md#list_deployments) | **GET** /peers/{nodeId}/deployments | 
 *PeerApi* | [**list_peers**](docs/PeerApi.md#list_peers) | **GET** /peers | Returns a list hub peers.
@@ -96,6 +97,7 @@ Class | Method | HTTP request | Description
 *SessionApi* | [**delete_session**](docs/SessionApi.md#delete_session) | **DELETE** /sessions/{sessionId} | 
 *SessionApi* | [**download_blob**](docs/SessionApi.md#download_blob) | **GET** /sessions/{sessionId}/blobs/{blobId} | Downloads binary content from the hub
 *SessionApi* | [**get_config**](docs/SessionApi.md#get_config) | **GET** /sessions/{sessionId}/config | Gets configuration from stash
+*SessionApi* | [**get_hub_info**](docs/SessionApi.md#get_hub_info) | **GET** /info | 
 *SessionApi* | [**get_session**](docs/SessionApi.md#get_session) | **GET** /sessions/{sessionId} | Gets hub session info
 *SessionApi* | [**list_blobs**](docs/SessionApi.md#list_blobs) | **GET** /sessions/{sessionId}/blobs | Lists currently allocated lobs
 *SessionApi* | [**list_session_peers**](docs/SessionApi.md#list_session_peers) | **GET** /sessions/{sessionId}/peers | List session peers
@@ -109,16 +111,19 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BlobInfo](docs/BlobInfo.md)
+ - [BuildInfo](docs/BuildInfo.md)
  - [Command](docs/Command.md)
  - [DeploymentInfo](docs/DeploymentInfo.md)
  - [DeploymentSpec](docs/DeploymentSpec.md)
  - [DeploymentSpecImage](docs/DeploymentSpecImage.md)
  - [DeploymentStatus](docs/DeploymentStatus.md)
  - [DockerCreateOptions](docs/DockerCreateOptions.md)
+ - [DockerNetDef](docs/DockerNetDef.md)
  - [DownloadFileCommand](docs/DownloadFileCommand.md)
  - [EnvType](docs/EnvType.md)
  - [ExecCommand](docs/ExecCommand.md)
  - [FileFormat](docs/FileFormat.md)
+ - [HubInfo](docs/HubInfo.md)
  - [HubSession](docs/HubSession.md)
  - [HubSessionCommand](docs/HubSessionCommand.md)
  - [HubSessionTouchCommand](docs/HubSessionTouchCommand.md)
